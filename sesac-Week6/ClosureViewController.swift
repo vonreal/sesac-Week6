@@ -9,10 +9,19 @@ import UIKit
 
 class ClosureViewController: UIViewController {
 
+    @IBOutlet weak var cardView: CardView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        cardView.posterImageView.backgroundColor = .white
+        cardView.posterImageView.layer.borderColor = UIColor.lightGray.cgColor
+        cardView.posterImageView.layer.borderWidth = 1
+        cardView.likeButton.tintColor = .systemPink
     }
     
+    @objc func likebuttonClicked() {
+        print("click button")
+    }
     
     @IBAction func colorPicekrButtonClicked(_ sender: UIButton) {
         showAlert(title: "피커를 띄웁ㅁ니다", message: nil, okTitle: "띄우기", okAction: {

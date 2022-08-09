@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wMd-UJ-kQp">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QCG-fh-PfL">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -75,43 +75,83 @@
         <!--Closure View Controller-->
         <scene sceneID="gd1-nL-IBl">
             <objects>
-                <viewController storyboardIdentifier="ClosureViewController" id="QCG-fh-PfL" customClass="ClosureViewController" customModule="sesac_Week6" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ClosureViewController" id="QCG-fh-PfL" customClass="ClosureViewController" customModule="sesac_Week6" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Sng-3j-8Gb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jac-jm-E89">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jac-jm-E89" customClass="SeSACButton" customModule="sesac_Week6" customModuleProvider="target">
                                 <rect key="frame" x="50" y="64" width="314" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="M4V-wC-ase"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="9"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" systemColor="linkColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="colorPicekrButtonClicked:" destination="QCG-fh-PfL" eventType="touchUpInside" id="bXP-4G-Mkb"/>
                                     <action selector="colorPicekrButtonClicked:" destination="1AX-gO-dsd" eventType="touchUpInside" id="fo7-h8-Jbp"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="leD-Ve-6CX">
-                                <rect key="frame" x="50" y="130" width="314" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="leD-Ve-6CX" customClass="SeSACButton" customModule="sesac_Week6" customModuleProvider="target">
+                                <rect key="frame" x="50" y="134" width="314" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="tV0-Ma-RVR"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="1" green="0.83643011960000002" blue="0.29275730210000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="backgroundColorChanged:" destination="1AX-gO-dsd" eventType="touchUpInside" id="dz5-jq-xOi"/>
                                     <action selector="backgroundColorChanged:" destination="QCG-fh-PfL" eventType="touchUpInside" id="elc-TU-ksD"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Via-gM-P50">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Via-gM-P50" customClass="SeSACButton" customModule="sesac_Week6" customModuleProvider="target">
                                 <rect key="frame" x="50" y="204" width="314" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="n58-EI-lj5"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" systemColor="quaternarySystemFillColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RqT-hT-z0U" customClass="CardView" customModule="sesac_Week6" customModuleProvider="target">
+                                <rect key="frame" x="103.5" y="344.5" width="207" height="207"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="RqT-hT-z0U" secondAttribute="height" multiplier="1:1" id="fmp-lD-pyF"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="WNY-UB-FbW"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -120,18 +160,39 @@
                             <constraint firstItem="leD-Ve-6CX" firstAttribute="top" secondItem="Jac-jm-E89" secondAttribute="bottom" constant="20" id="5J3-WY-PyN"/>
                             <constraint firstItem="Via-gM-P50" firstAttribute="leading" secondItem="WNY-UB-FbW" secondAttribute="leading" constant="50" id="HRs-B3-tMM"/>
                             <constraint firstItem="Jac-jm-E89" firstAttribute="top" secondItem="WNY-UB-FbW" secondAttribute="top" constant="20" id="KIk-ka-UUv"/>
+                            <constraint firstItem="RqT-hT-z0U" firstAttribute="centerX" secondItem="Sng-3j-8Gb" secondAttribute="centerX" id="Nro-1I-0gB"/>
                             <constraint firstItem="WNY-UB-FbW" firstAttribute="trailing" secondItem="leD-Ve-6CX" secondAttribute="trailing" constant="50" id="Yhw-23-OKF"/>
+                            <constraint firstItem="RqT-hT-z0U" firstAttribute="centerY" secondItem="Sng-3j-8Gb" secondAttribute="centerY" id="dS6-A6-ldZ"/>
+                            <constraint firstItem="RqT-hT-z0U" firstAttribute="width" secondItem="Sng-3j-8Gb" secondAttribute="width" multiplier="0.5" id="fWV-hV-dtC"/>
                             <constraint firstItem="WNY-UB-FbW" firstAttribute="trailing" secondItem="Via-gM-P50" secondAttribute="trailing" constant="50" id="jJ8-Xg-Ozg"/>
                             <constraint firstItem="Via-gM-P50" firstAttribute="top" secondItem="leD-Ve-6CX" secondAttribute="bottom" constant="20" id="q4W-H8-o4f"/>
                             <constraint firstItem="Jac-jm-E89" firstAttribute="leading" secondItem="WNY-UB-FbW" secondAttribute="leading" constant="50" id="rwH-tJ-CVk"/>
                             <constraint firstItem="WNY-UB-FbW" firstAttribute="trailing" secondItem="Jac-jm-E89" secondAttribute="trailing" constant="50" id="zQ4-pv-U30"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="cardView" destination="RqT-hT-z0U" id="Rdw-lV-Nka"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CPJ-wJ-kUo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="1AX-gO-dsd" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1786.9565217391305" y="112.5"/>
+            <point key="canvasLocation" x="1978.2608695652175" y="112.5"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="xZ4-4O-Xep">
+            <objects>
+                <viewController id="fF0-53-BGy" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZhT-b2-auF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="gkz-qJ-Nhs"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3e2-Mw-axO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2754" y="122"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="cVQ-Oq-2rx">
@@ -152,7 +213,24 @@
             <point key="canvasLocation" x="137.68115942028987" y="112.5"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="Jac-jm-E89">
+            <size key="intrinsicContentSize" width="67" height="31"/>
+        </designable>
+        <designable name="Via-gM-P50">
+            <size key="intrinsicContentSize" width="67" height="31"/>
+        </designable>
+        <designable name="leD-Ve-6CX">
+            <size key="intrinsicContentSize" width="67" height="31"/>
+        </designable>
+    </designables>
     <resources>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="quaternarySystemFillColor">
+            <color red="0.45490196078431372" green="0.45490196078431372" blue="0.50196078431372548" alpha="0.080000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
