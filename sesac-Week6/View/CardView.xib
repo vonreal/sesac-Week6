@@ -19,7 +19,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7nY-J3-ak6">
-                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <rect key="frame" x="8" y="8" width="398" height="880"/>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wzA-Ve-rZZ">
                     <rect key="frame" x="358" y="8" width="48" height="48"/>
@@ -33,12 +33,12 @@
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="7nY-J3-ak6" secondAttribute="trailing" id="2wf-J6-ceu"/>
+                <constraint firstItem="7nY-J3-ak6" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="1hn-t4-Afb"/>
+                <constraint firstAttribute="bottom" secondItem="7nY-J3-ak6" secondAttribute="bottom" constant="8" id="B1y-JG-ZW6"/>
                 <constraint firstItem="wzA-Ve-rZZ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="NoX-IL-p2s"/>
-                <constraint firstItem="7nY-J3-ak6" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Sl1-af-RsR"/>
                 <constraint firstAttribute="trailing" secondItem="wzA-Ve-rZZ" secondAttribute="trailing" constant="8" id="VIU-cg-JNX"/>
-                <constraint firstItem="7nY-J3-ak6" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="eDW-Dg-Dlg"/>
-                <constraint firstAttribute="bottom" secondItem="7nY-J3-ak6" secondAttribute="bottom" id="p1a-Gf-nG7"/>
+                <constraint firstAttribute="trailing" secondItem="7nY-J3-ak6" secondAttribute="trailing" constant="8" id="jGi-r6-ttw"/>
+                <constraint firstItem="7nY-J3-ak6" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="y24-VR-DuI"/>
             </constraints>
             <point key="canvasLocation" x="139" y="153"/>
         </view>
