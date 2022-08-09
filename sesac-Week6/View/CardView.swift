@@ -26,7 +26,8 @@ protocol A {
 }
 
 class CardView: UIView {
-
+    @IBOutlet weak var label: UILabel!
+    
     @IBOutlet weak var posterImageView: UIImageView!
     @IBOutlet weak var likeButton: UIButton!
     

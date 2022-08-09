@@ -13,6 +13,7 @@
 		761543D528A1F386007B1279 /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761543D328A1F386007B1279 /* CardCollectionViewCell.swift */; };
 		761543D628A1F386007B1279 /* CardCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 761543D428A1F386007B1279 /* CardCollectionViewCell.xib */; };
 		761543DA28A1F66A007B1279 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761543D928A1F66A007B1279 /* MainViewController.swift */; };
+		761543DC28A1FC30007B1279 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761543DB28A1FC30007B1279 /* MainTableViewCell.swift */; };
 		7647D1E728A090240021B9AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7647D1E628A090240021B9AD /* AppDelegate.swift */; };
 		7647D1E928A090240021B9AD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7647D1E828A090240021B9AD /* SceneDelegate.swift */; };
 		7647D1EB28A090240021B9AD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7647D1EA28A090240021B9AD /* ViewController.swift */; };
@@ -37,6 +38,7 @@
 		761543D328A1F386007B1279 /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
 		761543D428A1F386007B1279 /* CardCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardCollectionViewCell.xib; sourceTree = "<group>"; };
 		761543D928A1F66A007B1279 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = APIManger/MainViewController.swift; sourceTree = "<group>"; };
+		761543DB28A1FC30007B1279 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
 		7647D1E328A090240021B9AD /* sesac-Week6.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "sesac-Week6.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7647D1E628A090240021B9AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7647D1E828A090240021B9AD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 				7647D20C28A09B890021B9AD /* APIManger */,
 				7647D1F128A090250021B9AD /* LaunchScreen.storyboard */,
 				7647D1EC28A090240021B9AD /* Main.storyboard */,
+				761543DB28A1FC30007B1279 /* MainTableViewCell.swift */,
 				7647D20728A094E00021B9AD /* Network */,
 				761543C428A1DFEF007B1279 /* View */,
 				761543D928A1F66A007B1279 /* MainViewController.swift */,
@@ -217,6 +220,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				761543DC28A1FC30007B1279 /* MainTableViewCell.swift in Sources */,
 				7647D1EB28A090240021B9AD /* ViewController.swift in Sources */,
 				7647D1E728A090240021B9AD /* AppDelegate.swift in Sources */,
 				7647D21028A0AC9A0021B9AD /* ClosureViewController.swift in Sources */,

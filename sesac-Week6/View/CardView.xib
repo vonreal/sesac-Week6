@@ -9,6 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CardView" customModule="sesac_Week6" customModuleProvider="target">
             <connections>
+                <outlet property="label" destination="zq2-iN-Mpa" id="p3N-c8-Tpp"/>
                 <outlet property="likeButton" destination="wzA-Ve-rZZ" id="PxZ-3r-EpQ"/>
                 <outlet property="posterImageView" destination="7nY-J3-ak6" id="Jes-ni-WSh"/>
             </connections>
@@ -30,17 +31,30 @@
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <state key="normal" image="heart.fill" catalog="system"/>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zq2-iN-Mpa">
+                    <rect key="frame" x="149" y="407" width="116" height="82"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="zq2-iN-Mpa" secondAttribute="height" multiplier="58:41" id="3UT-Zl-v79"/>
+                        <constraint firstAttribute="height" id="BXm-Ye-AmC"/>
+                        <constraint firstAttribute="width" constant="44" id="aVb-8W-02b"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="7nY-J3-ak6" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="1hn-t4-Afb"/>
+                <constraint firstItem="zq2-iN-Mpa" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="AYK-GH-8jj"/>
                 <constraint firstAttribute="bottom" secondItem="7nY-J3-ak6" secondAttribute="bottom" constant="8" id="B1y-JG-ZW6"/>
                 <constraint firstItem="wzA-Ve-rZZ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="NoX-IL-p2s"/>
                 <constraint firstAttribute="trailing" secondItem="wzA-Ve-rZZ" secondAttribute="trailing" constant="8" id="VIU-cg-JNX"/>
+                <constraint firstItem="zq2-iN-Mpa" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="eQE-xA-uWv"/>
                 <constraint firstAttribute="trailing" secondItem="7nY-J3-ak6" secondAttribute="trailing" constant="8" id="jGi-r6-ttw"/>
                 <constraint firstItem="7nY-J3-ak6" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="y24-VR-DuI"/>
             </constraints>
-            <point key="canvasLocation" x="139" y="153"/>
+            <point key="canvasLocation" x="137.68115942028987" y="152.67857142857142"/>
         </view>
     </objects>
     <resources>
