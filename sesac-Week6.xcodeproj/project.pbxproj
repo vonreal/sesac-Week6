@@ -15,6 +15,7 @@
 		761543DA28A1F66A007B1279 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761543D928A1F66A007B1279 /* MainViewController.swift */; };
 		761543DC28A1FC30007B1279 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761543DB28A1FC30007B1279 /* MainTableViewCell.swift */; };
 		764194A128A3307A003A40AA /* ReusableViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764194A028A3307A003A40AA /* ReusableViewProtocol.swift */; };
+		764194A328A343E0003A40AA /* TMDBAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764194A228A343E0003A40AA /* TMDBAPIManager.swift */; };
 		7647D1E728A090240021B9AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7647D1E628A090240021B9AD /* AppDelegate.swift */; };
 		7647D1E928A090240021B9AD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7647D1E828A090240021B9AD /* SceneDelegate.swift */; };
 		7647D1EB28A090240021B9AD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7647D1EA28A090240021B9AD /* ViewController.swift */; };
@@ -30,6 +31,9 @@
 		7647D20B28A0951E0021B9AD /* URL+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7647D20A28A0951D0021B9AD /* URL+Extension.swift */; };
 		7647D20E28A09B9C0021B9AD /* KakaoBlogSearchAPIManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7647D20D28A09B9C0021B9AD /* KakaoBlogSearchAPIManger.swift */; };
 		7647D21028A0AC9A0021B9AD /* ClosureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7647D20F28A0AC9A0021B9AD /* ClosureViewController.swift */; };
+		76558FB528A3A59E00422C78 /* NAFILXMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76558FB428A3A59E00422C78 /* NAFILXMainViewController.swift */; };
+		76558FB928A3AD4200422C78 /* ContentListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76558FB828A3AD4200422C78 /* ContentListCollectionViewCell.swift */; };
+		76558FBB28A3AEE000422C78 /* MovieContentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76558FBA28A3AEE000422C78 /* MovieContentTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,9 +42,10 @@
 		761543D128A1F1B8007B1279 /* CardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardView.xib; sourceTree = "<group>"; };
 		761543D328A1F386007B1279 /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
 		761543D428A1F386007B1279 /* CardCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardCollectionViewCell.xib; sourceTree = "<group>"; };
-		761543D928A1F66A007B1279 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = APIManger/MainViewController.swift; sourceTree = "<group>"; };
+		761543D928A1F66A007B1279 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		761543DB28A1FC30007B1279 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
 		764194A028A3307A003A40AA /* ReusableViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableViewProtocol.swift; sourceTree = "<group>"; };
+		764194A228A343E0003A40AA /* TMDBAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMDBAPIManager.swift; sourceTree = "<group>"; };
 		7647D1E328A090240021B9AD /* sesac-Week6.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "sesac-Week6.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7647D1E628A090240021B9AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7647D1E828A090240021B9AD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -55,6 +60,9 @@
 		7647D20A28A0951D0021B9AD /* URL+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Extension.swift"; sourceTree = "<group>"; };
 		7647D20D28A09B9C0021B9AD /* KakaoBlogSearchAPIManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoBlogSearchAPIManger.swift; sourceTree = "<group>"; };
 		7647D20F28A0AC9A0021B9AD /* ClosureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosureViewController.swift; sourceTree = "<group>"; };
+		76558FB428A3A59E00422C78 /* NAFILXMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NAFILXMainViewController.swift; sourceTree = "<group>"; };
+		76558FB828A3AD4200422C78 /* ContentListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentListCollectionViewCell.swift; sourceTree = "<group>"; };
+		76558FBA28A3AEE000422C78 /* MovieContentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieContentTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,9 +84,10 @@
 			children = (
 				761543D328A1F386007B1279 /* CardCollectionViewCell.swift */,
 				761543CF28A1F176007B1279 /* CardView.swift */,
+				761543DB28A1FC30007B1279 /* MainTableViewCell.swift */,
 				761543C528A1E033007B1279 /* SeSACButton.swift */,
-				761543D428A1F386007B1279 /* CardCollectionViewCell.xib */,
-				761543D128A1F1B8007B1279 /* CardView.xib */,
+				76558FB828A3AD4200422C78 /* ContentListCollectionViewCell.swift */,
+				76558FBA28A3AEE000422C78 /* MovieContentTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -111,21 +120,19 @@
 		7647D1E528A090240021B9AD /* sesac-Week6 */ = {
 			isa = PBXGroup;
 			children = (
-				7641949D28A3305C003A40AA /* Protocol */,
 				7647D1F428A090250021B9AD /* Info.plist */,
 				7647D20528A091220021B9AD /* APIKey.swift */,
 				7647D1E628A090240021B9AD /* AppDelegate.swift */,
-				7647D20F28A0AC9A0021B9AD /* ClosureViewController.swift */,
-				761543DB28A1FC30007B1279 /* MainTableViewCell.swift */,
-				761543D928A1F66A007B1279 /* MainViewController.swift */,
 				7647D1E828A090240021B9AD /* SceneDelegate.swift */,
-				7647D1EA28A090240021B9AD /* ViewController.swift */,
 				7647D1EF28A090250021B9AD /* Assets.xcassets */,
 				7647D20C28A09B890021B9AD /* APIManger */,
 				7647D1F128A090250021B9AD /* LaunchScreen.storyboard */,
 				7647D1EC28A090240021B9AD /* Main.storyboard */,
 				7647D20728A094E00021B9AD /* Network */,
+				7641949D28A3305C003A40AA /* Protocol */,
+				76558FB028A3A4FF00422C78 /* Storyboard & XIB */,
 				761543C428A1DFEF007B1279 /* View */,
+				76558FAF28A3A4D300422C78 /* View Controllers */,
 			);
 			path = "sesac-Week6";
 			sourceTree = "<group>";
@@ -143,8 +150,29 @@
 			isa = PBXGroup;
 			children = (
 				7647D20D28A09B9C0021B9AD /* KakaoBlogSearchAPIManger.swift */,
+				764194A228A343E0003A40AA /* TMDBAPIManager.swift */,
 			);
 			path = APIManger;
+			sourceTree = "<group>";
+		};
+		76558FAF28A3A4D300422C78 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				7647D20F28A0AC9A0021B9AD /* ClosureViewController.swift */,
+				761543D928A1F66A007B1279 /* MainViewController.swift */,
+				76558FB428A3A59E00422C78 /* NAFILXMainViewController.swift */,
+				7647D1EA28A090240021B9AD /* ViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		76558FB028A3A4FF00422C78 /* Storyboard & XIB */ = {
+			isa = PBXGroup;
+			children = (
+				761543D428A1F386007B1279 /* CardCollectionViewCell.xib */,
+				761543D128A1F1B8007B1279 /* CardView.xib */,
+			);
+			path = "Storyboard & XIB";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -235,16 +263,20 @@
 				7647D1EB28A090240021B9AD /* ViewController.swift in Sources */,
 				7647D1E728A090240021B9AD /* AppDelegate.swift in Sources */,
 				7647D21028A0AC9A0021B9AD /* ClosureViewController.swift in Sources */,
+				76558FBB28A3AEE000422C78 /* MovieContentTableViewCell.swift in Sources */,
 				761543DA28A1F66A007B1279 /* MainViewController.swift in Sources */,
 				761543D528A1F386007B1279 /* CardCollectionViewCell.swift in Sources */,
 				7647D20E28A09B9C0021B9AD /* KakaoBlogSearchAPIManger.swift in Sources */,
 				761543D028A1F176007B1279 /* CardView.swift in Sources */,
 				7647D20928A094EF0021B9AD /* EndPoint.swift in Sources */,
 				761543C628A1E033007B1279 /* SeSACButton.swift in Sources */,
+				76558FB928A3AD4200422C78 /* ContentListCollectionViewCell.swift in Sources */,
 				7647D20628A091220021B9AD /* APIKey.swift in Sources */,
 				764194A128A3307A003A40AA /* ReusableViewProtocol.swift in Sources */,
 				7647D1E928A090240021B9AD /* SceneDelegate.swift in Sources */,
+				764194A328A343E0003A40AA /* TMDBAPIManager.swift in Sources */,
 				7647D20B28A0951E0021B9AD /* URL+Extension.swift in Sources */,
+				76558FB528A3A59E00422C78 /* NAFILXMainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

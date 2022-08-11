@@ -7,6 +7,8 @@
 
 import UIKit
 
+import Kingfisher
+
 /*
     tableView - CollectionVIew > 프로토콜
     tag
@@ -24,6 +26,8 @@ class MainViewController: UIViewController {
                                [Int](55...75),
                                [Int](234...567)]
     
+    var episodeList: [[String]] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -36,6 +40,15 @@ class MainViewController: UIViewController {
         bannerCollectionView.register(UINib(nibName: "CardCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "CardCollectionViewCell")
         bannerCollectionView.collectionViewLayout = collectionViewLayout()
         bannerCollectionView.isPagingEnabled = true
+        
+        TMDBAPIManager.shared.requestImage { value in
+            dump(value)
+            
+            self.episodeList = value
+            DispatchQueue.main.sync {
+                self.mainTableView.reloadData()
+            }
+        }
     }
     
 
@@ -53,7 +66,7 @@ class MainViewController: UIViewController {
 
 extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 10
+        return episodeList.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -65,21 +78,21 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "MainTableViewCell", for: indexPath) as? MainTableViewCell else { return UITableViewCell() }
         
+        cell.titleLabel.text = "\(TMDBAPIManager.shared.tvList[indexPath.section].0) 드라마 다시보기"
         print("MainViewController", #function, indexPath)
         cell.backgroundColor = .yellow
-        cell.contentCollectionView.backgroundColor = .lightGray
+        cell.contentCollectionView.backgroundColor = .clear
         cell.contentCollectionView.delegate = self
         cell.contentCollectionView.dataSource = self
         cell.contentCollectionView.tag = indexPath.section
         cell.contentCollectionView.register(UINib(nibName: "CardCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "CardCollectionViewCell")
         cell.contentCollectionView.reloadData() // index out of range 문제 해결
-        
         return cell
         
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 190
+        return 250
     }
     
     
@@ -89,7 +102,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
 extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return collectionView == bannerCollectionView ? 2 : numberList[collectionView.tag % 3].count
+        return 100
     }
     
     // 현재 콜렉션 뷰는 2개이기 때문에 bannerCollectionView || 테이블 뷰 안에 있는 컬렉션뷰가 들어올 수 있다.
@@ -98,14 +111,20 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CardCollectionViewCell", for: indexPath) as? CardCollectionViewCell else { return UICollectionViewCell() }
         
+        
         if collectionView == bannerCollectionView {
             let color: [UIColor] = [.purple,.black,.lightGray,.gray]
             cell.cardView.posterImageView.backgroundColor = color.randomElement()
         } else {
-            cell.cardView.posterImageView.backgroundColor = collectionView.tag.isMultiple(of: 2) ? .brown : .purple
+            let url = URL(string: "\(TMDBAPIManager.shared.imageURL)\(episodeList[collectionView.tag][indexPath.item])")
+            cell.cardView.posterImageView.kf.setImage(with: url)
+            cell.cardView.posterImageView.contentMode = .scaleAspectFill
+            cell.cardView.label.text = nil
+            
+            //            cell.cardView.posterImageView.backgroundColor = collectionView.tag.isMultiple(of: 2) ? .brown : .purple
             
 //            if indexPath.item < 2 {
-            cell.cardView.label.text = String(numberList[collectionView.tag % 3][indexPath.item])
+//            cell.cardView.label.text = String(numberList[collectionView.tag % 3][indexPath.item])
 //            }
         }
         return cell

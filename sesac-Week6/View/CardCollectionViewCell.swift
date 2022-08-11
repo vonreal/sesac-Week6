@@ -23,9 +23,7 @@ class CardCollectionViewCell: UICollectionViewCell {
     }
     
     func setupUI() {
-        cardView.posterImageView.backgroundColor = .white
-        cardView.posterImageView.layer.borderColor = UIColor.lightGray.cgColor
-        cardView.posterImageView.layer.borderWidth = 1
+        cardView.posterImageView.backgroundColor = .clear
         
         cardView.likeButton.tintColor = .systemPink
     }
