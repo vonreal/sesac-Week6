@@ -6,9 +6,10 @@
 
 ## :people_hugging: Authors
 
-- @Sophie(najiun)
+- @Sophie (najiun)
 
 
 ## :framed_picture: Demo
 ### 0810 과제
-![ezgif com-gif-maker (16)](https://user-images.githubusercontent.com/50474006/184044511-aefb7978-377b-43ee-b152-ea13a9f97b9b.gif)
+
+![ezgif com-gif-maker (17)](https://user-images.githubusercontent.com/50474006/184044739-9a387d8c-d56b-4a24-9b7c-e662084fba96.gif)
