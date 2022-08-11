@@ -34,6 +34,7 @@
 		76558FB528A3A59E00422C78 /* NAFILXMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76558FB428A3A59E00422C78 /* NAFILXMainViewController.swift */; };
 		76558FB928A3AD4200422C78 /* ContentListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76558FB828A3AD4200422C78 /* ContentListCollectionViewCell.swift */; };
 		76558FBB28A3AEE000422C78 /* MovieContentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76558FBA28A3AEE000422C78 /* MovieContentTableViewCell.swift */; };
+		7676BADE28A493A300D5BDBB /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7676BADD28A493A300D5BDBB /* MapViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +64,7 @@
 		76558FB428A3A59E00422C78 /* NAFILXMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NAFILXMainViewController.swift; sourceTree = "<group>"; };
 		76558FB828A3AD4200422C78 /* ContentListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentListCollectionViewCell.swift; sourceTree = "<group>"; };
 		76558FBA28A3AEE000422C78 /* MovieContentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieContentTableViewCell.swift; sourceTree = "<group>"; };
+		7676BADD28A493A300D5BDBB /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +164,7 @@
 				761543D928A1F66A007B1279 /* MainViewController.swift */,
 				76558FB428A3A59E00422C78 /* NAFILXMainViewController.swift */,
 				7647D1EA28A090240021B9AD /* ViewController.swift */,
+				7676BADD28A493A300D5BDBB /* MapViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -266,6 +269,7 @@
 				76558FBB28A3AEE000422C78 /* MovieContentTableViewCell.swift in Sources */,
 				761543DA28A1F66A007B1279 /* MainViewController.swift in Sources */,
 				761543D528A1F386007B1279 /* CardCollectionViewCell.swift in Sources */,
+				7676BADE28A493A300D5BDBB /* MapViewController.swift in Sources */,
 				7647D20E28A09B9C0021B9AD /* KakaoBlogSearchAPIManger.swift in Sources */,
 				761543D028A1F176007B1279 /* CardView.swift in Sources */,
 				7647D20928A094EF0021B9AD /* EndPoint.swift in Sources */,
