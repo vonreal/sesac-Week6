@@ -26,6 +26,7 @@ class MapViewController: UIViewController {
     @IBOutlet weak var mapView: MKMapView!
     
     // Location2. 위치에 대한 대부분을 담당
+    // 인스턴스 생성이 되는 시점에 locationManagerDidCangeAuthorization()이 실행됨. 그리고 얘 안의 함수들도 실행.
     let locationManager = CLLocationManager()
     
     override func viewDidLoad() {
@@ -34,13 +35,19 @@ class MapViewController: UIViewController {
         // Loaction3. 프로토콜 연결
         locationManager.delegate = self
         
-        checkUserDeviceLocationServiceAuthorization()
-        setRegionAndAnnotation()
-    }
-    
-    func setRegionAndAnnotation() {
+//        checkUserDeviceLocationServiceAuthorization() 제거 가능한 이유 알기!
         // 지도 중심 설정: 애플맵 활용해 좌표 복사
         let center = CLLocationCoordinate2D(latitude: 34.811635, longitude: 126.425222)
+        setRegionAndAnnotation(center: center)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        showRequestLocationServiceAlert()
+    }
+    
+    func setRegionAndAnnotation(center: CLLocationCoordinate2D) {
         
         // 지도 중심 기반으로 보여질 범위 설정
         let region = MKCoordinateRegion(center: center, latitudinalMeters: 100, longitudinalMeters: 100)
@@ -56,6 +63,23 @@ class MapViewController: UIViewController {
         
         mapView.addAnnotation(annotation)
     }
+    
+    func showRequestLocationServiceAlert() {
+      let requestLocationServiceAlert = UIAlertController(title: "위치정보 이용", message: "위치 서비스를 사용할 수 없습니다. 기기의 '설정>개인정보 보호'에서 위치 서비스를 켜주세요.", preferredStyle: .alert)
+      let goSetting = UIAlertAction(title: "설정으로 이동", style: .destructive) { _ in
+          
+          // 막 다운받거나 하는 앱이라면 설정까지만 가지고 다운받은지 좀 되었거나 그러면 세부화면까지 진입됨.
+          if let appSetting = URL(string: UIApplication.openSettingsURLString) {
+              UIApplication.shared.open(appSetting)
+          }
+      }
+      let cancel = UIAlertAction(title: "취소", style: .default)
+      requestLocationServiceAlert.addAction(cancel)
+      requestLocationServiceAlert.addAction(goSetting)
+      
+      present(requestLocationServiceAlert, animated: true, completion: nil)
+    }
+
 }
 
 // 위치 관련된 User Defined 메서드
@@ -82,7 +106,8 @@ extension MapViewController {
             checkUserCurrentLocationAuthorization(authorizationStatus)
             
         } else {
-            print("위치 서비스가 꺼져 있어 권한 요청을 못합니다.") // alert 처리
+//            print("위치 서비스가 꺼져 있어 권한 요청을 못합니다.") // alert 처리
+            showRequestLocationServiceAlert()
         }
     }
     
@@ -100,7 +125,10 @@ extension MapViewController {
             locationManager.startUpdatingLocation()
             
         case .restricted, .denied:
-            print("Denied, 아이폰 설정으로 유도")
+//            print("Denied, 아이폰 설정으로 유도")
+
+            
+            showRequestLocationServiceAlert()
         case .authorizedWhenInUse:
             print("When In Use")
             // 사용자가 위치를 허용해둔 상태라면, startUpdatingLocation을 통해 didUpdateLocations 메서드가 실행
@@ -118,6 +146,19 @@ extension MapViewController: CLLocationManagerDelegate {
     // Location5. 사용자의 위치를 성공적으로 가지고 온 경우
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         print(#function, locations)
+        
+        // ex. 위도 경도 기반으로 날씨 정보를 조회
+        // ex. 지도를 다시 세팅
+        if let coordinate = locations.last?.coordinate {
+//            let latitude = coordinate.latitude
+//            let longtitude = coordinate.longitude
+//            let center = CLLocationCoordinate2D(latitude: latitude, longitude: longtitude)
+            setRegionAndAnnotation(center: coordinate)
+        }
+        
+        
+        // 위치 업데이트 멈춰!
+        locationManager.stopUpdatingLocation()
     }
     
     // Location6. 사용자의 위치를 못 가지고 온 경우
@@ -147,7 +188,6 @@ extension MapViewController: MKMapViewDelegate {
 //        <#code#>
 //    }
     
-//    func mapView(_ mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
-//        <#code#>
-//    }
+    func mapView(_ mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
+    }
 }

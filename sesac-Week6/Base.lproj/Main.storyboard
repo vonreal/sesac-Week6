@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="i7y-LC-NVq">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zSZ-1g-RKv">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -22,14 +22,14 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="kakaoCell" id="xLd-rW-Iv3" customClass="kakaoCell" customModule="sesac_Week6" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.666666030883789" width="375" height="37.333332061767578"/>
+                                        <rect key="frame" x="0.0" y="44.666666030883789" width="375" height="37"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xLd-rW-Iv3" id="XrE-BI-M5R">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="37.333332061767578"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="37"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZsX-Ux-QPB">
-                                                    <rect key="frame" x="15" y="7.9999999999999982" width="345" height="21.333333333333329"/>
+                                                    <rect key="frame" x="15" y="8" width="345" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -322,6 +322,67 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QmL-04-COu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3508" y="112"/>
+        </scene>
+        <!--Camera View Controller-->
+        <scene sceneID="ONE-n7-vIS">
+            <objects>
+                <viewController id="zSZ-1g-RKv" customClass="CameraViewController" customModule="sesac_Week6" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3Qy-kN-c8r">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rmW-lk-cOF">
+                                <rect key="frame" x="20" y="64" width="335" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="Wrp-Bh-qdu"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="카메라"/>
+                                <connections>
+                                    <action selector="cameraButtonClicked:" destination="zSZ-1g-RKv" eventType="touchUpInside" id="8QH-hh-q2a"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Iu-PL-jVv">
+                                <rect key="frame" x="20" y="132" width="335" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="M0C-Ix-ran"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="갤러리"/>
+                                <connections>
+                                    <action selector="photoLibraryButtonClicked:" destination="zSZ-1g-RKv" eventType="touchUpInside" id="EpD-M9-EY6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fHg-pp-q0Z">
+                                <rect key="frame" x="20" y="200" width="335" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="Nqo-AU-NgS"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="YPImagePicker - 사진 하나 가져오기"/>
+                                <connections>
+                                    <action selector="YPImagePickerButtonClicked:" destination="zSZ-1g-RKv" eventType="touchUpInside" id="Yll-E1-B1f"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="KUM-iC-mZd"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="KUM-iC-mZd" firstAttribute="trailing" secondItem="fHg-pp-q0Z" secondAttribute="trailing" constant="20" id="1Gz-aW-zIE"/>
+                            <constraint firstItem="KUM-iC-mZd" firstAttribute="trailing" secondItem="rmW-lk-cOF" secondAttribute="trailing" constant="20" id="1uQ-au-lHA"/>
+                            <constraint firstItem="5Iu-PL-jVv" firstAttribute="leading" secondItem="KUM-iC-mZd" secondAttribute="leading" constant="20" id="5tp-Qs-eaY"/>
+                            <constraint firstItem="fHg-pp-q0Z" firstAttribute="top" secondItem="5Iu-PL-jVv" secondAttribute="bottom" constant="20" id="BUE-FH-bd6"/>
+                            <constraint firstItem="rmW-lk-cOF" firstAttribute="top" secondItem="KUM-iC-mZd" secondAttribute="top" constant="20" id="GgA-P6-lJZ"/>
+                            <constraint firstItem="rmW-lk-cOF" firstAttribute="leading" secondItem="KUM-iC-mZd" secondAttribute="leading" constant="20" id="Hma-Ua-4Ea"/>
+                            <constraint firstItem="fHg-pp-q0Z" firstAttribute="leading" secondItem="KUM-iC-mZd" secondAttribute="leading" constant="20" id="fNQ-Wx-7AS"/>
+                            <constraint firstItem="KUM-iC-mZd" firstAttribute="trailing" secondItem="5Iu-PL-jVv" secondAttribute="trailing" constant="20" id="yGw-TW-W3x"/>
+                            <constraint firstItem="5Iu-PL-jVv" firstAttribute="top" secondItem="rmW-lk-cOF" secondAttribute="bottom" constant="20" id="zyi-ht-cqR"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JC2-c7-lXJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4268" y="112"/>
         </scene>
         <!--Main View Controller-->
         <scene sceneID="hlm-xg-BSA">
