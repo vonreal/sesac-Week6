@@ -337,7 +337,7 @@
                                     <constraint firstAttribute="height" constant="48" id="Wrp-Bh-qdu"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="카메라"/>
+                                <buttonConfiguration key="configuration" style="plain" title="UIImagePickerController - 카메라"/>
                                 <connections>
                                     <action selector="cameraButtonClicked:" destination="zSZ-1g-RKv" eventType="touchUpInside" id="8QH-hh-q2a"/>
                                 </connections>
@@ -348,7 +348,7 @@
                                     <constraint firstAttribute="height" constant="48" id="M0C-Ix-ran"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="갤러리"/>
+                                <buttonConfiguration key="configuration" style="plain" title="UIImagePickerController - 갤러리"/>
                                 <connections>
                                     <action selector="photoLibraryButtonClicked:" destination="zSZ-1g-RKv" eventType="touchUpInside" id="EpD-M9-EY6"/>
                                 </connections>
@@ -370,20 +370,48 @@
                                     <constraint firstAttribute="height" constant="150" id="cqE-xe-En2"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gNA-v4-tsF">
+                                <rect key="frame" x="160" y="663" width="67" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="tyf-Yh-LC3"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="사진 앨범에 저장하기"/>
+                                <connections>
+                                    <action selector="saveToPhotoLibrary:" destination="zSZ-1g-RKv" eventType="touchUpInside" id="7S7-CQ-GjA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yv7-Bl-h7N">
+                                <rect key="frame" x="160" y="719" width="67" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="Uii-G1-pnU"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="clovaFaceButtonClicked:" destination="zSZ-1g-RKv" eventType="touchUpInside" id="KBw-sT-JtA"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="KUM-iC-mZd"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="KUM-iC-mZd" firstAttribute="trailing" secondItem="yv7-Bl-h7N" secondAttribute="trailing" constant="20" id="0cv-Pe-3cY"/>
                             <constraint firstItem="KUM-iC-mZd" firstAttribute="trailing" secondItem="fHg-pp-q0Z" secondAttribute="trailing" constant="20" id="1Gz-aW-zIE"/>
                             <constraint firstItem="KUM-iC-mZd" firstAttribute="trailing" secondItem="rmW-lk-cOF" secondAttribute="trailing" constant="20" id="1uQ-au-lHA"/>
+                            <constraint firstItem="yv7-Bl-h7N" firstAttribute="leading" secondItem="KUM-iC-mZd" secondAttribute="leading" constant="202" id="2zL-kV-l84"/>
                             <constraint firstItem="KUM-iC-mZd" firstAttribute="trailing" secondItem="fjD-Zz-bh1" secondAttribute="trailing" constant="10" id="5tM-fc-eTD"/>
                             <constraint firstItem="5Iu-PL-jVv" firstAttribute="leading" secondItem="KUM-iC-mZd" secondAttribute="leading" constant="20" id="5tp-Qs-eaY"/>
                             <constraint firstItem="fjD-Zz-bh1" firstAttribute="top" secondItem="fHg-pp-q0Z" secondAttribute="bottom" constant="10" id="6j7-aG-v33"/>
                             <constraint firstItem="fHg-pp-q0Z" firstAttribute="top" secondItem="5Iu-PL-jVv" secondAttribute="bottom" constant="20" id="BUE-FH-bd6"/>
+                            <constraint firstItem="yv7-Bl-h7N" firstAttribute="top" secondItem="gNA-v4-tsF" secondAttribute="bottom" constant="20" id="GXq-pF-5Hg"/>
                             <constraint firstItem="rmW-lk-cOF" firstAttribute="top" secondItem="KUM-iC-mZd" secondAttribute="top" constant="20" id="GgA-P6-lJZ"/>
                             <constraint firstItem="rmW-lk-cOF" firstAttribute="leading" secondItem="KUM-iC-mZd" secondAttribute="leading" constant="20" id="Hma-Ua-4Ea"/>
                             <constraint firstItem="fjD-Zz-bh1" firstAttribute="leading" secondItem="KUM-iC-mZd" secondAttribute="leading" constant="10" id="WYh-R9-7mk"/>
+                            <constraint firstItem="gNA-v4-tsF" firstAttribute="leading" secondItem="KUM-iC-mZd" secondAttribute="leading" constant="20" id="XSy-PU-zL9"/>
                             <constraint firstItem="fHg-pp-q0Z" firstAttribute="leading" secondItem="KUM-iC-mZd" secondAttribute="leading" constant="20" id="fNQ-Wx-7AS"/>
+                            <constraint firstItem="gNA-v4-tsF" firstAttribute="top" secondItem="fjD-Zz-bh1" secondAttribute="bottom" constant="20" id="q51-2k-Te6"/>
+                            <constraint firstItem="KUM-iC-mZd" firstAttribute="trailing" secondItem="gNA-v4-tsF" secondAttribute="trailing" constant="20" id="sfd-sF-3ZH"/>
                             <constraint firstItem="KUM-iC-mZd" firstAttribute="trailing" secondItem="5Iu-PL-jVv" secondAttribute="trailing" constant="20" id="yGw-TW-W3x"/>
                             <constraint firstItem="5Iu-PL-jVv" firstAttribute="top" secondItem="rmW-lk-cOF" secondAttribute="bottom" constant="20" id="zyi-ht-cqR"/>
                         </constraints>

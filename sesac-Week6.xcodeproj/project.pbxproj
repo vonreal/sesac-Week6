@@ -37,6 +37,7 @@
 		7676BADE28A493A300D5BDBB /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7676BADD28A493A300D5BDBB /* MapViewController.swift */; };
 		76A1B0CD28A5D6FA001FC596 /* YPImagePicker in Frameworks */ = {isa = PBXBuildFile; productRef = 76A1B0CC28A5D6FA001FC596 /* YPImagePicker */; };
 		76A1B0CF28A5DE67001FC596 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A1B0CE28A5DE67001FC596 /* CameraViewController.swift */; };
+		76A1B0D228A5ECB9001FC596 /* Toast in Frameworks */ = {isa = PBXBuildFile; productRef = 76A1B0D128A5ECB9001FC596 /* Toast */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +79,7 @@
 				7647D20228A090590021B9AD /* SwiftyJSON in Frameworks */,
 				7647D1FF28A0904A0021B9AD /* Kingfisher in Frameworks */,
 				7647D1FC28A090400021B9AD /* Alamofire in Frameworks */,
+				76A1B0D228A5ECB9001FC596 /* Toast in Frameworks */,
 				76A1B0CD28A5D6FA001FC596 /* YPImagePicker in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -204,6 +206,7 @@
 				7647D1FE28A0904A0021B9AD /* Kingfisher */,
 				7647D20128A090590021B9AD /* SwiftyJSON */,
 				76A1B0CC28A5D6FA001FC596 /* YPImagePicker */,
+				76A1B0D128A5ECB9001FC596 /* Toast */,
 			);
 			productName = "sesac-Week6";
 			productReference = 7647D1E328A090240021B9AD /* sesac-Week6.app */;
@@ -238,6 +241,7 @@
 				7647D1FD28A0904A0021B9AD /* XCRemoteSwiftPackageReference "Kingfisher" */,
 				7647D20028A090590021B9AD /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
 				76A1B0CB28A5D6FA001FC596 /* XCRemoteSwiftPackageReference "YPImagePicker" */,
+				76A1B0D028A5ECB9001FC596 /* XCRemoteSwiftPackageReference "Toast-Swift" */,
 			);
 			productRefGroup = 7647D1E428A090240021B9AD /* Products */;
 			projectDirPath = "";
@@ -542,6 +546,14 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		76A1B0D028A5ECB9001FC596 /* XCRemoteSwiftPackageReference "Toast-Swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/scalessec/Toast-Swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -564,6 +576,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 76A1B0CB28A5D6FA001FC596 /* XCRemoteSwiftPackageReference "YPImagePicker" */;
 			productName = YPImagePicker;
+		};
+		76A1B0D128A5ECB9001FC596 /* Toast */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 76A1B0D028A5ECB9001FC596 /* XCRemoteSwiftPackageReference "Toast-Swift" */;
+			productName = Toast;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
