@@ -84,6 +84,40 @@ class CameraViewController: UIViewController {
         }
     }
     
+    // 이미지뷰 이미지 > 네이버 > 얼굴 분석 해줘 요청 > 응답!
+    // 문자열이 아닌 파일, 이미지, PDF 파일 자체가 그대로 전송 되지 않음. => 텍스트 형태로 인코딩
+    // 어떤 파일의 종류가 서버에게 전달이 되는 지 명시 = Content-Type
+    @IBAction func clovaFaceButtonClicked(_ sender: UIButton) {
+        
+        let url = "https://openapi.naver.com/v1/vision/celebrity"
+        
+        let headers: HTTPHeaders = [
+            "X-Naver-Client-Id": APIKey.naver_id,
+            "X-Naver-Client-Secret": APIKey.naver_pw,
+//            "Content-Type": "multipart/form-data" alamofire에 내장되어 있음
+        ]
+        
+        // UIImage를 텍스트 형태(바이너리 타입)로 변환해서 전달
+        guard let imageData = photoImageView.image?.jpegData(compressionQuality: 0.3) else {
+            print("변환할 이미지가 없음")
+            self.view.makeToast("변환할 이미지가 없어요.")
+            return
+        }
+        
+        AF.upload(multipartFormData: { multipartFormData in
+            multipartFormData.append(Data(imageData), withName: "image")
+        }, to: url, method: .post, headers: headers)
+        .validate(statusCode: 200...500).responseData { response in
+            switch response.result {
+            case .success(let value):
+                let json = JSON(value)
+                print("JSON: \(json)")
+            case .failure(let error):
+                print(error)
+            }
+        }
+    }
+    
 }
 
 // UIImagePickerController - 3
